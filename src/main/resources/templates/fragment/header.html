@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link th:href="@{/css/header.css}" rel="stylesheet">
+
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+
+    <title>Guest House</title>
+    <script src="https://kit.fontawesome.com/d6fd3b6ecc.js" crossorigin="anonymous"></script>
+    <!-- 헤더 css -->
+<!--    <script src="/js/header.js" defer></script>-->
+    <!-- 제이쿼리 & 아작스-->
+<!--    <script src="/js/jquery-3.5.1.js"></script>-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+</head>
+
+<body>
+<div id="wrap">
+    <header>
+        <nav class="navbar">
+
+            <div class="navbar__logo">
+                <a href="#" id="main__logo"><i class="fa fa-cloud"></i>Jeong-Repo</a>
+            </div>
+
+            <ul class="navbar__menu">
+                <li><a href="http://54.95.8.128"><i class="fa fa-folder-open"></i>Jeong Personal HP</a></li>
+                <li><a href="http://43.206.67.201/TeamProject/"><i class="fa fa-folder-open"></i>Project 1 - Market Jolly</a></li>
+                <li><a href="#"><i class="fa fa-folder-open"></i>Project 2 - Undetermined</a></li>
+            </ul>
+
+            <ul class="navbar__icons">
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-facebook-square"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+            </ul>
+
+            <a href="#" class="navbar__toggleBtn">
+                <i class="fas fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+
+<script>
+    const toggleBtn = document.querySelector('.navbar__toggleBtn');
+    const menu = document.querySelector('.navbar__menu');
+    const icons = document.querySelector('.navbar__icons');
+    const smallMenu = document.querySelector('.member__smallMenu');
+
+    toggleBtn.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        icons.classList.toggle('active');
+        smallMenu.classList.toggle('active');
+
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.jeong_repository.mapper.ProfileMapper">
+
+    <select id="selectProfile" resultType="com.example.jeong_repository.model.ProfileModel">
+        SELECT
+            tpf.aws_url,
+            tpf.filename,
+            tpf.profile,
+            tpf.upload_time
+        FROM tb_profile tpf
+    </select>
+
+    <insert id="profileInsert">
+        INSERT INTO tb_profile(
+            aws_url,
+            filename,
+            profile,
+            upload_time
+        ) values (
+                     #{aws_url, jdbcType=VARCHAR},
+                     #{filename, jdbcType=VARCHAR},
+                     #{profile, jdbcType=VARCHAR},
+                     #{upload_time, jdbcType=VARCHAR}
+                 )
+    </insert>
+
+</mapper>

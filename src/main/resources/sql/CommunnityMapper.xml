@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.jeong_repository.mapper.CommunityMapper">
+
+    <select id="selectCount" resultType="int">
+        SELECT count(*) FROM tb_community
+    </select>
+
+    <select id="selectCommunity" resultType="com.example.jeong_repository.model.CommunityModel">
+        SELECT uid, title, content, save_time FROM tb_community LIMIT #{startRow}, #{pageSize};
+    </select>
+
+
+</mapper>

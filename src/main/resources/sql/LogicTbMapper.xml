@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.jeong_repository.mapper.LogicTbMapper">
+
+
+    <select id="selectLogicTb" resultType="com.example.jeong_repository.model.LogicTbModel">
+        SELECT num, logic_name, logic_url, save_time FROM tb_logic_list
+    </select>
+
+    <!--    <select id="selectLogicTb" resultType="int">-->
+    <!--        SELECT count(*) FROM jeong_repo_db.tb_logic-->
+    <!--    </select>-->
+
+
+</mapper>
